@@ -225,6 +225,12 @@ const toolbox = {
         },
         {
             kind: "category",
+            name: "random",
+            colour: "#00FF33",
+            contents: [],
+        },
+        {
+            kind: "category",
             name: "JSON",
             colour: "#FF0000",
             contents: [
