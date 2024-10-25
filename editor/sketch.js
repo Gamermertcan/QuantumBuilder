@@ -228,7 +228,7 @@ const toolbox = {
             name: "Random",
             colour: "#00FF33",
             contents: [
-                block("random_between");
+                block("random_between"),
             ],
         },
         {
