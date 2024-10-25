@@ -1,4 +1,4 @@
-const version = "3.5";
+const version = "1";
 
 const whats_new = `
 added dark mode
@@ -225,9 +225,11 @@ const toolbox = {
         },
         {
             kind: "category",
-            name: "random",
+            name: "Random",
             colour: "#00FF33",
-            contents: [],
+            contents: [
+                block("random_between");
+            ],
         },
         {
             kind: "category",
@@ -378,7 +380,7 @@ $("#darkmode").click(() => {
     const self = $("#darkmode");
     self.toggleClass("dark");
     $(".blocklyTreeSeparator").toggleClass("dark");
-    localStorage.setItem("PenguinBuilder", JSON.stringify({
+    localStorage.setItem("QuantumBuilder", JSON.stringify({
         shown_version: version,
         dark: self.hasClass("dark"),
     }));  
@@ -445,8 +447,8 @@ $("#Export").click(() => {
         workspace.getAllVariables().forEach(v => v.name = Extension_id + "_" + v.name);
         download(
             `
-            // Made with PenguinBuilder ${version}
-            // use PenguinBuilder at "https://chickencuber.github.io/PenguinBuilder/"
+            // Made with QuantumBuilder ${version)
+            // use QuantumBuilder at "https://gamermertcan.github.io/QuantumBuilder/"
             (function(Scratch) {
                 const blocks = [];
                 const vars = {};
