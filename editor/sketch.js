@@ -447,7 +447,7 @@ $("#Export").click(() => {
         workspace.getAllVariables().forEach(v => v.name = Extension_id + "_" + v.name);
         download(
             `
-            // Made with QuantumBuilder ${version)
+            // Made with QuantumBuilder ${version}
             // use QuantumBuilder at "https://gamermertcan.github.io/QuantumBuilder/"
             (function(Scratch) {
                 const blocks = [];
